@@ -1,4 +1,4 @@
-const { app } = require('')
+const { app } = require('./utils/app')
 
 app.get('/healtcheck', (req, res) => {
 	return res.json ({
