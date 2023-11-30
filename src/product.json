@@ -1,0 +1,128 @@
+[
+    {
+      "id": 1,
+      "title": "prueba1",
+      "description": "Este es un producto prueba",
+      "price": 200,
+      "thumbnail": "Sin imagen",
+      "code": "abc123",
+      "stock": 25
+    },
+    {
+      "id": 2,
+      "title": "prueba2",
+      "description": "Este es un producto prueba2",
+      "price": 20,
+      "thumbnail": "Sin imagen",
+      "code": "abc<zz",
+      "stock": 30
+    },
+    {
+      "id": 3,
+      "title": "prueba3",
+      "description": "Este es un producto prueba3",
+      "price": 10,
+      "thumbnail": "Sin imagen",
+      "code": "añid<zz",
+      "stock": 30
+    },
+    {
+      "id": 4,
+      "title": "prueba4",
+      "description": "Este es un producto prueba4",
+      "price": 20,
+      "thumbnail": "Sin imagen",
+      "code": "ñlsadjw",
+      "stock": 30
+    },
+    {
+      "id": 5,
+      "title": "prueba5",
+      "description": "Este es un producto prueba5",
+      "price": 2,
+      "thumbnail": "Sin imagen",
+      "code": "ñlsadjw",
+      "stock": 300
+    },
+    {
+      "id": 6,
+      "title": "prueba6",
+      "description": "Este es un producto prueba6",
+      "price": 200,
+      "thumbnail": "Sin imagen",
+      "code": "ñaa.wsdñ",
+      "stock": 3
+    },
+    {
+      "id": 7,
+      "title": "prueba7",
+      "description": "Este es un producto prueba7",
+      "price": 1000,
+      "thumbnail": "Sin imagen",
+      "code": "AZRC",
+      "stock": 3
+    },
+    {
+      "id": 8,
+      "title": "prueba8",
+      "description": "Este es un producto prueba8",
+      "price": 200,
+      "thumbnail": "Sin imagen",
+      "code": "abc123",
+      "stock": 25
+    },
+    {
+      "id": 9,
+      "title": "prueba9",
+      "description": "Este es un producto prueba9",
+      "price": 20,
+      "thumbnail": "Sin imagen",
+      "code": "abc<zz",
+      "stock": 30
+    },
+    {
+      "id": 10,
+      "title": "prueba10",
+      "description": "Este es un producto prueba10",
+      "price": 10,
+      "thumbnail": "Sin imagen",
+      "code": "añid<zz",
+      "stock": 30
+    },
+    {
+      "id": 11,
+      "title": "prueba11",
+      "description": "Este es un producto prueba11",
+      "price": 20,
+      "thumbnail": "Sin imagen",
+      "code": "ñlsadjw",
+      "stock": 30
+    },
+    {
+      "id": 12,
+      "title": "prueba12",
+      "description": "Este es un producto prueba12",
+      "price": 2,
+      "thumbnail": "Sin imagen",
+      "code": "ñlsadjw",
+      "stock": 300
+    },
+    {
+      "id": 13,
+      "title": "prueba13",
+      "description": "Este es un producto prueba13",
+      "price": 200,
+      "thumbnail": "Sin imagen",
+      "code": "ñaa.wsdñ",
+      "stock": 3
+    },
+    {
+      "id": 14,
+      "title": "prueba14",
+      "description": "Este es un producto prueba14",
+      "price": 1000,
+      "thumbnail": "Sin imagen",
+      "code": "AZRC",
+      "stock": 3
+    }
+  ]

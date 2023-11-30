@@ -2,6 +2,9 @@ const express = require('express')
 const handlebars = require('express-handlebars')
 const { Server } = require('socket.io')
 const mongoose = require('mongoose')
+const MongoConnect = require('connect-mongo')
+const cookieParser = require('cookie-parser')
+const session = require('express-session')
 
 const app = express()
 
@@ -9,7 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 app.engine('handlebars', handlebars.engine())
-app.set('views', './views')
+app.set('views', ('views/layouts'))
 app.set('view engine', 'handlebars')
 
 app.use(express.static('public'))
@@ -54,6 +57,21 @@ io.on('connection', socket => {
 		io.emit('message', JSON.stringify(newMessage))
 	})
 })
+
+//AGREGO
+app.use(cookieParser('secrekey'))
+app.use(session({
+	store: MongoConnect.create({
+		mongoUrl: MONGODB_CONNECT,
+		ttl: 15
+	}),
+	secret: 'secretSession',
+	resave: true,
+	saveUninitialized: true
+}))
+
+const sessionRouter = require('../routers/sessionRouter')
+app.use('/api/session', sessionRouter)
 
 module.exports = {
     app,

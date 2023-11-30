@@ -1,0 +1,38 @@
+<section>
+	{{#if noProducts}}
+	<h1>Carrito vacio</h1>
+	<a href="/products">Volver</a>
+	{{else}}
+	<h1>Carrito</h1>
+	<table id="productos">
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Quantity</th>
+  </tr>
+
+  {{#each productsCart}}
+  <tr>
+    <td>{{this.product._id}}</td>
+    <td>{{this.product.title}}</td>
+    <td>{{this.product.description}}</td>
+    <td>{{this.product.price}}</td>
+    <td>{{this.quantity}}</td>
+  </tr>
+  {{/each}}
+  </table>
+</section>
+	
+
+
+   <div>
+        <p><span>Cantidad total: </span>{{totalQuantity}}</p>
+        <p><span>Precio total: </span>${{totalPrice}}</p>
+    </div>
+    {{/if}}
+</section>
+
+<script src="/js/cart.js"></script>
+<script src="/socket.io/socket.io.js"></script>

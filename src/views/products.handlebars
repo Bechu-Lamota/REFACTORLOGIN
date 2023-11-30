@@ -1,0 +1,49 @@
+Lista de Productos
+
+<h6> Pagina: {{page}} de {{totalPages}} </h6>
+{{!--
+{{#if noProducts }}
+No hay productos en el listado
+{{else }}
+--}}
+<table id="products">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Stock</th>
+    </tr>
+    <tr>
+    <script>
+    fetch('/api/products') //Pongo la ruta del servidor para obtener el JSON.
+        .then(response => response.json())
+        .then(products => {
+            const table = document.querySelector('#products');
+
+            products.forEach(product => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${product._id}</td>
+                    <td>${product.title}</td>
+                    <td>${product.price}</td>
+                    <td>${product.stock}</td>
+                `;
+
+                table.appendChild(row);
+            });
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+    </script>
+    </tr>
+
+</table>
+
+{{#if hasPrevPage}}
+   <h6><a href="/products?page={{prevPage}}"> Pagina anterior</a></h6> 
+{{/if}}
+
+{{#if hasNextPage}}
+   <h6><a href="/products?page={{nextPage}}">Pagina siguiente</a></h6>
+{{/if}}
+
+<script src="/socket.io/socket.io.js"></script>
