@@ -1,11 +1,8 @@
-<h2>Session Login</h2>
+<h2>Ingresa tu nombre para entrar al chat!</h2>
 
-<form action="/api/sessions/login" method="POST">
-  Email: <input type="text" name="email"><br><br>
-  Contraseña: <input type="password" name="password"><br><br>
+<form method="POST" action="/login">
+	<label for="name">Nombre:</label>
+	<input type="text" name="name">
 
-  <input type="submit" value="Iniciar sesión">
-
+	<input type="submit" value="Enviar" >
 </form>
-
-<script src="/socket.io/socket.io.js"></script>
